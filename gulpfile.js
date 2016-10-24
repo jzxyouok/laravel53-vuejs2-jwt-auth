@@ -19,6 +19,6 @@ elixir(mix => {
        .browserSync({
             files: ['app/**/*', 'public/**/*', 'resources/views/**/*'],
             port: 5000,
-            proxy: 'dev.laravel53-vuejs2-jwt-auth'
+            proxy: 'enter_your_hosting' //ex: dev.laravel53-vuejs2.com
         });
 });

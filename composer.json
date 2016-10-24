@@ -43,6 +43,12 @@
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
+        ],
+        "chmod": [
+          "chmod -R ug+rwx ./storage ./bootstrap/cache"
+        ],
+        "chgrp": [
+          "chgrp -R www ./storage ./bootstrap/cache"
         ]
     },
     "config": {
