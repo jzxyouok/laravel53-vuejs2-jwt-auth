@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div class="container">
         <div class="alert alert-danger" v-if="error">
             <p>There was an error, unable to sign in with those credentials.</p>
         </div>
