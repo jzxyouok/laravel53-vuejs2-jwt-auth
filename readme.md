@@ -8,7 +8,11 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+這是一個讓你快速建立 Laravel 與 Vuejs2 的環境, 使用API的方式來進行前後端溝通.
+
+如果你想讓他更好或一起學習, 歡迎加入我們一起強化這個專案內容
+
+Line ID: wwf1214ralf
 
 ## Install Step
 
@@ -22,8 +26,25 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
     
     $ cp .env.example .env
     
-    check .env setting
+@ 檢查 
+    
+1 根/.env 資料庫設定
+
+2.如果你正在開發,請檢查 根/gulpfile.js browserSync.proxy: 'enter_your_hosting'
     
     $ php artisan migrate
     
     $ gulp watch
+
+## Package Use By Backend
+
+- [recca0120/laravel-tracy](https://github.com/recca0120/laravel-tracy) Debuger Tool
+- [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth) API Auth
+
+## Package Use By frontend
+
+- [ratiw/vuetable-2](https://github.com/ratiw/vuetable-2) 一個類似JQueryDatatable的Vue套件 (預計)
+
+## About Link
+
+- [線上Vuejs讀書會](https://github.com/onlinereadbook/bookvuejs)
