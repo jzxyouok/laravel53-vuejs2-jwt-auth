@@ -1,16 +1,8 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
-
-                    <div class="panel-body">
-                        I'm an example component!
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1>Laravel53-Vuejs2-Jwt-Auth (imagine10255)</h1>
+        <h2>Example</h2>
+        <h1>{{ msg }}</h1>
     </div>
 </template>
 
@@ -18,6 +10,20 @@
     export default {
         mounted() {
             console.log('Component ready.')
+        },
+        data () {
+            return {
+                msg: 'This is a Example Msg !!'
+            }
         }
     }
+
+    /*
+     #與下面寫法相等,但是在這必須使用上面的方法
+         new Vue({
+             data: {
+                message: 'Hello Vue.js!'
+             }
+         })
+     */
 </script>
