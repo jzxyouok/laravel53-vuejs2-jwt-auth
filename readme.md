@@ -41,9 +41,9 @@ Line ID: wwf1214ralf
 - [recca0120/laravel-tracy](https://github.com/recca0120/laravel-tracy) Debuger Tool
 - [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth) API Auth
 
-## Package Use By frontend
+## Package Use By Frontend
 
-- [ratiw/vuetable-2](https://github.com/ratiw/vuetable-2) 一個類似JQueryDatatable的Vue套件 (預計)
+- [ratiw/vuetable-2](https://github.com/ratiw/vuetable-2) 一個類似JQueryDatatable的Vue套件
 
 ## About Link
 
