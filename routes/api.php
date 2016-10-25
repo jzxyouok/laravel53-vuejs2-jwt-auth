@@ -22,10 +22,14 @@ Route::group(['middleware' => ['api']], function () {
         'uses' => 'Auth\AuthController@signin',
     ]);
 
-    Route::group(['middleware' => 'jwt.auth'], function () {
-        Route::get('/user', [
-            'uses' => 'UserController@index',
-        ]);
-    });
+    Route::get('user', [
+        'uses' => 'UserController@index',
+    ]);
+
+//    Route::group(['middleware' => 'jwt.auth'], function () {
+//        Route::get('/user', [
+//            'uses' => 'UserController@index',
+//        ]);
+//    });
 
 });

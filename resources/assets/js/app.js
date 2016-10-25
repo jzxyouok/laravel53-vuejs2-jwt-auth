@@ -14,6 +14,7 @@ import Dashboard from "./components/Dashboard.vue";
 import Register from "./components/Register.vue";
 import Signin from "./components/Signin.vue";
 import Example from "./components/Example.vue";
+import Vuetable from "./components/Vuetable.vue";
 
 var VueResource = require('vue-resource');
 
@@ -40,6 +41,8 @@ const router = new VueRouter({
         { path: '/example', component: Example },
         { path: '/register', component: Register },
         { path: '/signin', component: Signin },
+        { path: '/vuetable', component: Vuetable },
+
     ]
 });
 new Vue(Vue.util.extend({router}, App)).$mount('#app');

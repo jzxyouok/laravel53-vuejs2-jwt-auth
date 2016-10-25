@@ -6,6 +6,7 @@
                     <li><router-link to="home">Home</router-link></li>
                     <li><router-link to="dashboard">Dashboard</router-link></li>
                     <li><router-link to="example">Example</router-link></li>
+                    <li><router-link to="vuetable">Vuetable</router-link></li>
                     <li class="pull-right" v-if="!auth.user.authenticated">
                         <router-link to="register">Register</router-link>
                     </li>
