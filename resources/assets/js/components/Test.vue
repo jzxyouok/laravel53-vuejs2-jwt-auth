@@ -6,7 +6,7 @@
                     <h3 class="ui header">Dashboard</h3>
                     <p>Laravel53-Vuejs2-Jwt-Auth (imagine10255)</p>
                     <p>
-                        主控面板
+                        {{ msg }}
                     </p>
                 </div>
                 <div class="six wide right floated column">
@@ -16,5 +16,23 @@
 
         </div>
     </div>
-
 </template>
+
+<script>
+    export default {
+        data () {
+            return {
+                msg: '這是一個測試訊息, 透過Vue的方式進行綁定給值'
+            }
+        }
+    }
+
+    /*
+     #與下面寫法相等,但是在這必須使用上面的方法
+         new Vue({
+             data: {
+                message: 'Hello Vue.js!'
+             }
+         })
+     */
+</script>

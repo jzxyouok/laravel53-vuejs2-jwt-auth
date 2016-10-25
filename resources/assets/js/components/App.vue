@@ -1,31 +1,67 @@
 <template>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <nav>
-                <ul class="list-inline">
-                    <li><router-link to="home">Home</router-link></li>
-                    <li><router-link to="dashboard">Dashboard</router-link></li>
-                    <li><router-link to="example">Example</router-link></li>
-                    <li><router-link to="vuetable">Vuetable</router-link></li>
-                    <li class="pull-right" v-if="!auth.user.authenticated">
-                        <router-link to="register">Register</router-link>
-                    </li>
-                    <li class="pull-right" v-if="!auth.user.authenticated">
-                        <router-link to="signin">Sign in</router-link>
-                    </li>
-                    <li class="pull-right" v-if="auth.user.authenticated">
-                        <a href="#" v-on:click="signout">Sign out</a>
-                    </li>
-                    <li class="pull-right" v-if="auth.user.authenticated">
-                        Hi, {{ auth.user.profile.name }}
-                    </li>
-                </ul>
-            </nav>
+    <div>
+        <!-- Following Menu -->
+        <div class="ui large top fixed hidden menu">
+            <div class="ui container">
+                <a class="active item">Home</a>
+                <a class="item">Work</a>
+                <a class="item">Company</a>
+                <a class="item">Careers</a>
+                <div class="right menu">
+                    <div class="item">
+                        <a class="ui button">Log in</a>
+                    </div>
+                    <div class="item">
+                        <a class="ui primary button">Sign Up</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="panel-body">
+
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
+            <a class="active item">Home</a>
+            <a class="item">Work</a>
+            <a class="item">Company</a>
+            <a class="item">Careers</a>
+            <a class="item">Login</a>
+            <a class="item">Signup</a>
+        </div>
+
+        <!-- Page Contents -->
+        <div class="pusher">
+            <div class="ui inverted vertical center aligned segment">
+
+                <div class="ui container">
+                    <div class="ui large secondary inverted pointing menu">
+                        <a class="toc item">
+                            <i class="sidebar icon"></i>
+                        </a>
+                        <router-link to="home" class="item active">Home</router-link>
+                        <router-link to="dashboard" class="item">Dashboard</router-link>
+                        <router-link to="test" class="item">Test</router-link>
+                        <router-link to="vuetable" class="item">Vuetable</router-link>
+                        <div class="right item">
+                            <div v-if="!auth.user.authenticated">
+                                <router-link to="register" class="ui inverted button">Register</router-link>
+                            </div>
+                            <div v-if="!auth.user.authenticated">
+                                <router-link to="signin" class="ui inverted button">Sign in</router-link>
+                            </div>
+                            <div v-if="auth.user.authenticated">
+                                <a href="#" v-on:click="signout" class="ui inverted button">Sign out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <router-view></router-view>
+
         </div>
     </div>
+
 </template>
 
 <script>

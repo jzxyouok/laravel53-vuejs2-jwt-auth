@@ -1,110 +1,123 @@
 <template>
-    <div class="ui vertical segment">
-        <div class="ui container">
 
-            <div id="app" class="ui vertical stripe segment">
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h3 class="ui header">Vuetable <a href="https://github.com/ratiw/vuetable-2" target="_blank">Github</a> </h3>
+                    <p>Laravel53-Vuejs2-Jwt-Auth (imagine10255)</p>
+                    <p>
+                        {{ msg }}
+                    </p>
+                </div>
+                <div class="" style="width:100%">
 
-                <div id="content" class="ui basic segment">
+                    <div id="content" class="ui basic segment">
 
-                    <div class="ui grid">
-                        <div class="ui left aligned nine wide column">
-                            <div class="ui labeled icon input">
-                                <div class="ui label">Search:</div>
-                                <input v-model="searchFor" class="ui input" @keyup.enter="setFilter">
-                                <i class="search icon"></i>
+                        <div class="ui grid">
+                            <div class="ui left aligned nine wide column">
+                                <div class="ui labeled icon input">
+                                    <div class="ui label">Search:</div>
+                                    <input v-model="searchFor" class="ui input" @keyup.enter="setFilter">
+                                    <i class="search icon"></i>
+                                </div>
+                                <button class="ui button primary" @click="setFilter">Go</button>
+                                <button class="ui button" @click="resetFilter">Reset</button>
                             </div>
-                            <button class="ui button primary" @click="setFilter">Go</button>
-                            <button class="ui button" @click="resetFilter">Reset</button>
-                        </div>
-                        <div class="ui right aligned seven wide column">
-                            <button class="ui basic button" id="settingsBtn" @click="showSettingsModal">
-                                <i class="setting icon"></i>
-                                Settings
-                            </button>
-                        </div>
-                    </div><!-- ui grid -->
-
-                    <div :class="[{'vuetable-wrapper ui basic segment': true}, loading]">
-
-                        <vuetable ref="vuetable"
-                                  api-url="api/user"
-                                  :fields="fields"
-                                  pagination-path="pagination"
-                                  :sort-order="sortOrder"
-                                  :multi-sort="multiSort"
-                                  :per-page="perPage"
-                                  :append-params="moreParams"
-                                  detail-row-component="my-detail-row"
-                                  detail-row-id="id"
-                                  detail-row-transition="expand"
-                                  row-class-callback="rowClassCB"
-                                  @vuetable:pagination-data="onPaginationData"
-                                  @vuetable:load-success="onLoadSuccess"
-                                  @vuetable:loading="showLoader"
-                                  @vuetable:loaded="hideLoader"
-                                  @vuetable:cell-clicked="onCellClicked"
-                        ></vuetable>
-                        <div class="vuetable-pagination ui bottom attached segment grid">
-                            <vuetable-pagination-info ref="paginationInfo"
-                                                      :pagination-info-template="paginationInfoTemplate"
-                            ></vuetable-pagination-info>
-                            <component :is="paginationComponent" ref="pagination"
-                                       @vuetable-pagination:change-page="onChangePage"
-                            ></component>
-                        </div>
-
-                    </div><!-- vuetable-wrapper -->
-
-                </div><!-- content -->
-
-                <div class="ui small modal" id="settingsModal">
-                    <div class="header">Settings</div>
-                    <div class="content ui form">
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" v-model="multiSort">
-                                <label>Multisort (use Alt+Click)</label>
+                            <div class="ui right aligned seven wide column">
+                                <button class="ui basic button" id="settingsBtn" @click="showSettingsModal">
+                                    <i class="setting icon"></i>
+                                    Settings
+                                </button>
                             </div>
-                        </div>
-                        <div class="ui divider"></div>
-                        <div class="field">
-                            <label>Pagination:</label>
-                            <select class="ui simple dropdown" v-model="paginationComponent">
-                                <option value="vuetable-pagination">vuetable-pagination</option>
-                                <option value="vuetable-pagination-dropdown">vuetable-pagination-dropdown</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label>Per Page:</label>
-                            <select class="ui simple dropdown" v-model="perPage">
-                                <option :value="10">10</option>
-                                <option :value="15">15</option>
-                                <option :value="20">20</option>
-                                <option :value="25">25</option>
-                            </select>
-                        </div>
-                        <div class="ui fluid card">
-                            <div class="content">
-                                <div class="header">Visible fields</div>
+                        </div><!-- ui grid -->
+
+                        <div :class="[{'vuetable-wrapper ui basic segment': true}, loading]">
+
+                            <vuetable ref="vuetable"
+                                      api-url="api/user"
+                                      :fields="fields"
+                                      pagination-path="pagination"
+                                      :sort-order="sortOrder"
+                                      :multi-sort="multiSort"
+                                      :per-page="perPage"
+                                      :append-params="moreParams"
+                                      detail-row-component="my-detail-row"
+                                      detail-row-id="id"
+                                      detail-row-transition="expand"
+                                      row-class-callback="rowClassCB"
+                                      @vuetable:pagination-data="onPaginationData"
+                                      @vuetable:load-success="onLoadSuccess"
+                                      @vuetable:loading="showLoader"
+                                      @vuetable:loaded="hideLoader"
+                                      @vuetable:cell-clicked="onCellClicked"
+                            ></vuetable>
+                            <div class="vuetable-pagination ui bottom attached segment grid">
+                                <vuetable-pagination-info ref="paginationInfo"
+                                                          :pagination-info-template="paginationInfoTemplate"
+                                ></vuetable-pagination-info>
+                                <component :is="paginationComponent" ref="pagination"
+                                           @vuetable-pagination:change-page="onChangePage"
+                                ></component>
                             </div>
-                            <div class="content">
-                                <div v-for="field in fields" class="field">
-                                    <div class="ui checkbox">
-                                        <input type="checkbox" v-model="field.visible">
-                                        <label>{{ getFieldTitle(field) }}</label>
+
+                        </div><!-- vuetable-wrapper -->
+
+                    </div><!-- content -->
+
+                    <div class="ui small modal" id="settingsModal">
+                        <div class="header">Settings</div>
+                        <div class="content ui form">
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" v-model="multiSort">
+                                    <label>Multisort (use Alt+Click)</label>
+                                </div>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="field">
+                                <label>Pagination:</label>
+                                <select class="ui simple dropdown" v-model="paginationComponent">
+                                    <option value="vuetable-pagination">vuetable-pagination</option>
+                                    <option value="vuetable-pagination-dropdown">vuetable-pagination-dropdown</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Per Page:</label>
+                                <select class="ui simple dropdown" v-model="perPage">
+                                    <option :value="10">10</option>
+                                    <option :value="15">15</option>
+                                    <option :value="20">20</option>
+                                    <option :value="25">25</option>
+                                </select>
+                            </div>
+                            <div class="ui fluid card">
+                                <div class="content">
+                                    <div class="header">Visible fields</div>
+                                </div>
+                                <div class="content">
+                                    <div v-for="field in fields" class="field">
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" v-model="field.visible">
+                                            <label>{{ getFieldTitle(field) }}</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="actions">
+                            <div class="ui cancel button">Close</div>
+                        </div>
                     </div>
-                    <div class="actions">
-                        <div class="ui cancel button">Close</div>
-                    </div>
-                </div>
 
-            </div><!-- app -->
-        </div><!-- ui container -->
+                </div><!-- app -->
+
+            </div>
+
+        </div>
     </div>
+
+
 </template>
 
 

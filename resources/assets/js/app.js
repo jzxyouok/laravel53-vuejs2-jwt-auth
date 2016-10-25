@@ -13,7 +13,7 @@ import Home from "./components/Home.vue";
 import Dashboard from "./components/Dashboard.vue";
 import Register from "./components/Register.vue";
 import Signin from "./components/Signin.vue";
-import Example from "./components/Example.vue";
+import Test from "./components/Test.vue";
 import Vuetable from "./components/Vuetable.vue";
 
 var VueResource = require('vue-resource');
@@ -38,7 +38,7 @@ const router = new VueRouter({
         { path: '/', component: Home },
         { path: '/home', component: Home },
         { path: '/dashboard', component: Dashboard },
-        { path: '/example', component: Example },
+        { path: '/test', component: Test },
         { path: '/register', component: Register },
         { path: '/signin', component: Signin },
         { path: '/vuetable', component: Vuetable },
