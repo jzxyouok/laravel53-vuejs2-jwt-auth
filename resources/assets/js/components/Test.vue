@@ -3,7 +3,7 @@
         <div class="ui middle aligned stackable grid container">
             <div class="row">
                 <div class="eight wide column">
-                    <h3 class="ui header">Dashboard</h3>
+                    <h3 class="ui header">Test</h3>
                     <p>Laravel53-Vuejs2-Jwt-Auth (imagine10255)</p>
                     <p>
                         {{ msg }}

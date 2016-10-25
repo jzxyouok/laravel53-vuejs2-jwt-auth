@@ -37,7 +37,7 @@
                         <a class="toc item">
                             <i class="sidebar icon"></i>
                         </a>
-                        <router-link to="home" class="item active">Home</router-link>
+                        <router-link to="home" class="item">Home</router-link>
                         <router-link to="dashboard" class="item">Dashboard</router-link>
                         <router-link to="test" class="item">Test</router-link>
                         <router-link to="vuetable" class="item">Vuetable</router-link>

@@ -158,6 +158,11 @@
         body {
             overflow-y: scroll;
         }
+
+        .ui.secondary.inverted.pointing.menu .router-link-active.item {
+            border-color: #FFF;
+            color: #fff;
+        }
     </style>
 
 
