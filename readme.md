@@ -34,6 +34,8 @@ Line ID: wwf1214ralf
     
     $ php artisan migrate
     
+    $ php artisan db:seed
+    
     $ gulp watch
 
 ## Package Use By Backend
