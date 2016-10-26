@@ -6,9 +6,6 @@
                 <div class="eight wide column">
                     <h3 class="ui header">Vuetable <a href="https://github.com/ratiw/vuetable-2" target="_blank">Github</a> </h3>
                     <p>Laravel53-Vuejs2-Jwt-Auth (imagine10255)</p>
-                    <p>
-                        {{ msg }}
-                    </p>
                 </div>
                 <div class="" style="width:100%">
 
