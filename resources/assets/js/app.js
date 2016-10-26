@@ -14,7 +14,8 @@ import Dashboard from "./components/Dashboard.vue";
 import Register from "./components/Register.vue";
 import Signin from "./components/Signin.vue";
 import Test from "./components/Test.vue";
-import Vuetable from "./components/Vuetable.vue";
+import VuetableDemo1 from "./components/VuetableDemo1.vue";
+import VuetableDemo2 from "./components/VuetableDemo2.vue";
 
 var VueResource = require('vue-resource');
 
@@ -41,7 +42,8 @@ const router = new VueRouter({
         { path: '/test', component: Test },
         { path: '/register', component: Register },
         { path: '/signin', component: Signin },
-        { path: '/vuetable', component: Vuetable },
+        { path: '/vuetable_demo1', component: VuetableDemo1 },
+        { path: '/vuetable_demo2', component: VuetableDemo2 },
 
     ]
 });

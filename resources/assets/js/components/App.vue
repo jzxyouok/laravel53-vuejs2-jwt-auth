@@ -40,7 +40,7 @@
                         <router-link to="home" class="item">Home</router-link>
                         <router-link to="dashboard" class="item">Dashboard</router-link>
                         <router-link to="test" class="item">Test</router-link>
-                        <router-link to="vuetable" class="item">Vuetable</router-link>
+                        <router-link to="vuetable_demo1" class="item">Vuetable</router-link>
                         <div class="right item">
                             <div v-if="!auth.user.authenticated">
                                 <router-link to="register" class="ui inverted button">Register</router-link>
