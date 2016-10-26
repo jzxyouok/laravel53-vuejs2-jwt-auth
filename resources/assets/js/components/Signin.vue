@@ -21,7 +21,7 @@
                     </form>
                 </div>
                 <div class="six wide right floated column">
-                    <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
+                    <!--<img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">-->
                 </div>
             </div>
 
