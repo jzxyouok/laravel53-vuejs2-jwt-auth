@@ -14,11 +14,17 @@ require('laravel-elixir-vue-2');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js')
-       .browserSync({
+    mix.sass(
+        './resources/assets/frontend/sass/app.scss',
+        './public/frontend/css'
+    );
+    mix.webpack(
+        './resources/assets/frontend/js/app.js',
+        './public/frontend/js'
+    );
+    mix.browserSync({
             files: ['app/**/*', 'public/**/*', 'resources/views/**/*'],
             port: 5000,
-            proxy: 'enter_your_hosting' //ex: dev.laravel53-vuejs2.com
+            proxy: 'dev.laravel53-vuejs2.com' //ex: dev.laravel53-vuejs2.com
         });
 });
